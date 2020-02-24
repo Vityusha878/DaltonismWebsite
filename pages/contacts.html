@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О нас</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ubuntu+Condensed&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+</head>
+<body>
+<header>
+    <a class="header-link" href="../index.html">Главная</a>
+
+    <div class="dropdown">
+
+        <a class="header-link" href="kinds.html">Виды</a>
+        <div class="dropdown-content">
+            <a href="kinds.html#protanopia">Протанопия</a>
+            <a href="kinds.html#deteranopia">Дейтеранопия</a>
+            <a href="kinds.html#tritanopia">Тританопия</a>
+            <a href="kinds.html#trixromazia">Трихромазия</a>
+            <a href="kinds.html#axromatopsia">Ахроматопсия</a>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <a class="header-link" href="medication.html">Лечение</a>
+        <div class="dropdown-content">
+            <a href="medication.html#simptoms">Симптомы</a>
+            <a href="medication.html#diagnostic">Диагностика</a>
+            <a href="medication.html#drugs">Лекарства</a>
+            <a href="medication.html#methods">Методы</a>
+        </div>
+    </div>
+
+    <a class="header-link" href="prevention.html">Профилактика</a>
+    <div class="dropdown">
+        <a class="header-link">О нас</a>
+        <div class="dropdown-content">
+            <a href="contacts.html">Контакты</a>
+            <a href="website.html">О сайте</a>
+
+        </div>
+    </div>
+</header>
+<main>
+    <h1>Обратная связь</h1>
+    <p>С помощью данной формы вы можете связаться с одним из наших подразделений для получения расширенной обратной
+        связи, касаемо предоставляемой и распространяемой на данном информационном ресурсе, посвященном проблемам людей
+        , испытывающих проблемы с цветовосприятием окружающей их действительности.</p>
+
+<!--При клике на кнопку отправить (произведении действия submit)
+    производится переход к якорю #openModal для открытия далогового окна
+    путём обработки события onsubmit (return false производится для отмены
+    передачи данных и соответственного обновления страницы)-->
+
+    <form onsubmit="window.location.href = '#openModal'; return false">
+        <label>
+            <span class="form-label">ФИО</span>
+            <input oninput="signature.value = this.value"
+                   maxlength="70" pattern="[А-Я-а-я-Ёё]+"
+                   type="text" placeholder="ФИО" required>
+        </label>
+        <br>
+        <label>
+            <span class="form-label">Электронная почта</span>
+
+            <input oninput="mail.value = this.value"
+                   type="email" placeholder="E-mail" required>
+        </label>
+        <br>
+        <label>
+            <span class="form-label">Номер телефона</span>
+
+            <input oninput="phone.value = this.value"
+                   pattern="[+0-9*#]{6,12}"
+                   type="tel" placeholder="Номер" required>
+        </label>
+        <br>
+        <label>
+            <div>Комментарий</div>
+            <textarea oninput="comment.value = this.value" placeholder="Комментарий"></textarea>
+        </label>
+
+        <button type="submit">Отправить</button>
+        <div id="openModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Информация о пользователе</h2>
+                </div>
+                <div class="modal-body">
+                    <div><span class="form-label">ФИО:</span>
+                        <output name="signature"></output>
+                    </div>
+                    <div><span class="form-label">Электронная почта:</span>
+                        <output name="mail"></output>
+                    </div>
+                    <div>
+                        <span class="form-label">Номер телефона:</span>
+                        <output name="phone"></output>
+                    </div>
+                    <div>
+                        Комментарий:
+                        <output name="comment" id="comment-field"></output>
+                    </div>
+                    <a href="#close" id="close">Принять</a>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+</main>
+<footer>
+    Стальмахович Виктор ИС-18-1
+</footer>
+</body>
+</html>

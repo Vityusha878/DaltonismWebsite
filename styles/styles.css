@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-size: 12pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #202020;
+    line-height: 1.4rem;
+    color: #bbb;
+    /**/
+}
+
+header {
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    position: sticky;
+    background-color: #456C36;
+}
+
+main {
+    min-height: calc(100vh - 10.8rem);
+    max-width: 50rem;
+    /* Поля вокруг текста */
+    padding: 1rem 2rem 2rem;
+    margin: auto;
+    background-color: #333333;
+    border-left: 0.5rem solid #456C36;
+    border-right: 0.5rem solid #456C36;
+    border-bottom: none;
+    border-top: none;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+a {
+    color: #f5c000;
+}
+
+footer {
+
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    background-color: #456C36;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+strong {
+    color: #80aa74;
+}
+
+h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    margin-bottom: -0.5rem;
+    margin-left: 1.95rem;
+    color: #d4d4d4;
+}
+
+
+h2 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #f5f5f5;
+
+    margin-left: 1.95rem;
+    /*фиксы для хедера*/
+}
+
+h2 a {
+
+    display: block;
+    position: relative;
+    top: -5.5rem;
+    visibility: hidden;
+}
+
+#sticky-container {
+    top: 0;
+    pointer-events: none;
+    height: 100vh;
+    position: sticky;
+}
+
+#main-image {
+    width: 100%;
+    background-image: url(../images/main-background-3.jpg);
+    background-size: cover;
+    background-position: top ;
+    background-position-x: calc(50% + 0.5rem);
+    background-attachment: fixed;
+    height: 30rem;
+}
+
+#main-image h1{
+    position: relative;
+    top: 15rem;
+    margin-top: 0;
+    font-size: 4rem;
+}
+
+#arrow-container {
+    z-index: -1;
+    background-color: #333333;
+    width: 64px;
+
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
+    height: 64px;
+    border-radius: 32px;
+}
+
+#arrow-container img {
+    margin-left: 8px;
+    margin-top: 6px;
+    width: 48px;
+    height: 48px;
+}
+
+.header-link {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+
+}
+
+.header-link:hover {
+    color: #456C36;
+    background-color: white;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    transition-duration: 10s;
+    transition-property: width;
+}
+
+
+.dropdown-content {
+    width: 100%;
+    text-align: left;
+    display: none;
+    position: absolute;
+    background-color: white;
+    /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);*/
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .header-link {
+    width: 6rem;
+    color: #456C36;
+    background-color: white;
+
+}
+
+.img {
+    display: block;
+    border: 0.5rem solid #456C36;
+    max-width: 30rem;
+    margin: auto;
+
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.caption {
+    font-style: italic;
+    text-align: center;
+
+    display: block;
+
+    margin: 1rem auto;
+
+    max-width: 35rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+tr:first-child {
+    font-weight: 600;
+    background-color: #456C36;
+    color: #c6c6c6;
+}
+
+tr {
+    background-color: #3c3c3c;
+}
+
+td {
+    border: 2px solid #8b8b8b;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+button {
+    display: block;
+    text-align: center;
+    max-width: 21rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.39);
+    background-color: #456C36;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    align-self: center;
+}
